@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+<body>
+    <h1>Forms Demo</h1>
+    <form action="/food">
+        <div>            
+            <label for="userName">Kullanıcı adı giriniz:</label>
+            <input type="text" placeholder="Kullanıcı Adı" id="userName" name="userName"/>
+        </div>
+       <div>
+           <label for="password">Şifre giriniz:</label>
+           <input type="password" placeholder="Şifre" id="password" name="password"/>
+        </div>
+       <div>
+           <label for="color">Renk seçiniz:</label>
+           <input type="color" id="color" name="color"/>
+        </div>
+        <div>
+            <label for="number">Sayı giriniz:</label>
+            <input type="number" id="number" name="number" min="1" max="20"/>
+            <button>Submit</button>
+        </div>
+    </form>
+    <hr />
+    <form action="https://www.google.com/search">
+    <label for="google">Google</label>
+    <input type="text" name="q" id="google">
+    <button>Search Google</button>
+    </form>
+
+     <form action="https://www.youtube.com/results">
+        <label for="youTube">Youtube</label>
+        <input type="text" name="search_query" id="youTube">
+        <button>Search Youtube</button>
+     </form>
+
+    <form action="https://www.reddit.com/search">
+        <label for="reddit">Reddit</label>
+        <input type="text" id="reddit" name="q">
+        <button>Ara</button>
+    </form>
+    <form action=""></form>
+<h2>Daha Fazla Input </h2>
+<form action="/birds">
+    <input type="checkbox" name="tos" id="agree">
+    <label for="agree">Kabul Ediyorum</label>
+    <p>
+        <label for="xs">XS:</label>
+        <input type="radio" name="size" id="xs" value="xs"/>
+        <label for="s">S:</label>
+        <input type="radio" name="size" id="s" value="s"/>
+        <label for="m">M:</label>
+        <input type="radio" name="size" id="m" value="m"/>
+    </p>
+    <P>
+    <label for="animal">FAVORİ HAYVANI SEÇİNİZ</label>
+     <select name="animal"  id="animal">
+        <option value="">Seçiniz</option>
+        <option value="bird">Kuş</option>
+        <option value="fish" selected>Balık</option>
+        <option value="dog">Köpek</option>
+     </select>
+    </P>
+    <p>
+        <label for="peynir">Peynir Miktarı:</label>
+        <input type="range" name="peynir" id="peynir" min="1" max="10" step="7" value="75"/>
+    </p>
+    <div>
+        <label for="comment">Özel İstek</label>
+        <br>
+        <textarea placeholder="Yorumunuzu yazın" name="comment" id="comment" cols="20" rows="20" ></textarea>
+    </div>
+    <button>Yolla</button>
+</form>
+<h2>Validations</h2>
+<form action="/spare">
+    <label for="first">İsim giriniz:</label>
+    <input type="text" name="First" id="first" required minlength="5" maxlength="20"/>
+    <button>Submit</button>
+</form>
+</body>
+</html>
+<!-- 
+http://127.0.0.1:5500/food?userName=Aleyna -->
+<!-- http://127.0.0.1:5500/food?userName=Aleyna&password=1235646&color=%23824f4f&number=4565 -->
